@@ -1,3 +1,6 @@
+# name: discourse-location
+# about: adds dropdown's to select location
+# authors: Vairix
 Discourse::Application.routes.prepend do
   get "/cities_by_state" => "custom_user_preferences#cities_by_state"
   get "/neighborhood_by_city" => "custom_user_preferences#neighborhood_by_city"
