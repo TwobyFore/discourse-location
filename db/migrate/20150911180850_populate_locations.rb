@@ -1,8 +1,7 @@
 class PopulateLocations < ActiveRecord::Migration
   def change
-    province = UserField.create(name: 'Province/State', field_type: 'dropdown', editable: true, description: 'Province/State', required: false, show_on_profile: true, position: 1)
-    city     = UserField.create(name: 'City', field_type: 'dropdown', editable: true, description: 'City', required: false, show_on_profile: true, position: 2)
-    UserField.create(name: 'Neighborhood', field_type: 'dropdown', editable: true, description: 'Neighborhood', required: false, show_on_profile: true, position: 3)
+    province = UserField.create(name: 'Province/State', field_type: 'dropdown', editable: true, description: 'Province/State', required: false, show_on_profile: true, position: 100)
+    city     = UserField.create(name: 'City', field_type: 'dropdown', editable: true, description: 'City', required: false, show_on_profile: true, position: 101)
 
     british = UserFieldOption.create(user_field_id: province.id, value: 'British Columbia')
 
