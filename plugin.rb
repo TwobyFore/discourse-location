@@ -9,4 +9,5 @@ end
 after_initialize do
   load File.expand_path("../models/extended_user_field_option.rb", __FILE__)
   load File.expand_path("../controllers/custom_user_preferences_controller.rb", __FILE__)
+  load File.expand_path("../controllers/extended_user_fields_controller.rb", __FILE__)
 end

@@ -1,5 +1,5 @@
 class PopulateLocations < ActiveRecord::Migration
-  def change
+  def up
     province = UserField.create(name: 'Province/State', field_type: 'dropdown', editable: true, description: 'Province/State', required: false, show_on_profile: true, position: 100)
     city     = UserField.create(name: 'City', field_type: 'dropdown', editable: true, description: 'City', required: false, show_on_profile: true, position: 101)
 
@@ -164,5 +164,8 @@ class PopulateLocations < ActiveRecord::Migration
     UserFieldOption.create(user_field_id: city.id, value: 'White Rock', parent_field_option_id: british.id)
     UserFieldOption.create(user_field_id: city.id, value: 'Williams Lake', parent_field_option_id: british.id)
     UserFieldOption.create(user_field_id: city.id, value: 'Zeballos', parent_field_option_id: british.id)
+  end
+
+  def down
   end
 end
